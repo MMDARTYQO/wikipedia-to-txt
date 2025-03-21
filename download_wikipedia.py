@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+import os
 
 def download_wikipedia_article(title, filename):
     url = f'https://he.wikipedia.org/wiki/{title}'
@@ -11,6 +12,8 @@ def download_wikipedia_article(title, filename):
 
     with open(filename, 'w', encoding='utf-8') as file:
         file.write(content)
+
+    print(f"File saved at: {os.path.abspath(filename)}")
 
 if __name__ == "__main__":
     article_title = "פייתון_(שפת_תכנות)"  # ערך קבוע

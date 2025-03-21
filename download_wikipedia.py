@@ -14,6 +14,6 @@ def download_wikipedia_article(title, filename):
 
 if __name__ == "__main__":
     article_title = "פייתון_(שפת_תכנות)"  # ערך קבוע
-    output_filename = "python_article.txt"  # שם קובץ קבוע
+    output_filename = "python_article.txt"  # שם קובץ קבוע בתוך ספריית הפרויקט
     download_wikipedia_article(article_title, output_filename)
     print(f"הערך '{article_title}' נשמר בהצלחה בקובץ '{output_filename}'")

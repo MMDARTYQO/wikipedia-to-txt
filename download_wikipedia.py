@@ -6,7 +6,7 @@ import time
 
 def download_wikipedia_article(title, filename):
     url = f'https://he.wikipedia.org/wiki/{quote(title)}'
-    response = requests.get(url)
+    response = requests.get(url,verify = False)
     response.raise_for_status()  # Raise an error if the request failed
 
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -39,7 +39,7 @@ def get_all_article_titles():
 
     article_titles = []
     while True:
-        R = S.get(url=URL, params=PARAMS)
+        R = S.get(url=URL, params=PARAMS,verify = False)
         if R.status_code == 200:
             try:
                 DATA = R.json()
